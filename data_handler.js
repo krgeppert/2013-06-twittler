@@ -21,11 +21,13 @@ $(document).ready(function(){
         $listOfTweets.appendTo($body);
         $updateButton.appendTo($body);
         $homeButton.appendTo($body);
-
     };
     var displayTweets = function(){
     };
-    var generateTweet = function(){
+    var generateTweet = function(chirp){
+        var $tweet = $('<div></div>');
+        $tweet.text('@' + chirp.user + ': ' + chirp.message + " created at: " + chirp.timeStamp);
+        return $tweet;
     };
     var updateStream = function(){
     };
