@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7c57e383-0746-434d-aac3-75d7f4d1bdcd" name="Default" comment="">
+      <change type="DELETED" beforePath="C:\Users\kyle\Google Drive\Programming\HackReactor\PreCourseWork\2013-06-twittler\data_handler.js" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data_handler.js" afterPath="$PROJECT_DIR$/data_handler.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
     </list>
     <ignored path="2013-06-twittler.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -28,28 +29,17 @@
       <file leaf-file-name="data_generator.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/data_generator.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="26" selection-start="372" selection-end="372" vertical-scroll-proportion="0.0">
+            <state line="20" column="2" selection-start="655" selection-end="655" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="0" selection-start="197" selection-end="197" vertical-scroll-proportion="0.0">
+            <state line="38" column="44" selection-start="1266" selection-end="1266" vertical-scroll-proportion="0.5304965">
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="data_handler.js" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/data_handler.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="31" column="38" selection-start="1085" selection-end="1085" vertical-scroll-proportion="0.40934843">
-              <folding>
-                <element signature="e#0#156#0" expanded="false" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -85,8 +75,8 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/data_handler.js" />
+        <option value="$PROJECT_DIR$/index.html" />
       </list>
     </option>
   </component>
@@ -169,8 +159,8 @@
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="849" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth2" value="175" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth1" value="174" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder2" value="2" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder2" value="2" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder3" value="3" />
   </component>
   <component name="RunManager">
@@ -282,20 +272,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/data_generator.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="26" selection-start="372" selection-end="372" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="0" selection-start="197" selection-end="197" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/jquery.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
@@ -310,12 +286,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/data_handler.js">
+    <entry file="file://$PROJECT_DIR$/data_generator.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="38" selection-start="1085" selection-end="1085" vertical-scroll-proportion="0.40934843">
-          <folding>
-            <element signature="e#0#156#0" expanded="false" />
-          </folding>
+        <state line="20" column="2" selection-start="655" selection-end="655" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="38" column="44" selection-start="1266" selection-end="1266" vertical-scroll-proportion="0.5304965">
+          <folding />
         </state>
       </provider>
     </entry>

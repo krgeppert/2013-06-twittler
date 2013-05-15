@@ -5,6 +5,83 @@
     <script src="data_generator.js"></script>
   </head>
   <body>
-    <script src="data_handler.js"></script>
+    <table width="500" border="1" style="position: fixed; left: 50%; margin-left: -250px; ">
+        <tr>
+            <td width="200">
+                <h1 >Twittler</h1>
+            </td>
+            <td width="100" height="100">
+            <button id="update" type="button" onclick="updateStream()" >Update</button>
+            <button id="toHome" type="button" onclick="goToUser('home')" >Home</button>
+        </td>
+        </tr>
+        <tr>
+
+            <td width="400">
+                <table id="tweets">
+                </table>
+            </td>
+        </tr>
+    </table>
+    <script>
+        var currentTweetIndex = 0;
+        var userState = "home";
+        var updateStream = function(){
+            for (var i = currentTweetIndex; i < streams.home.length; i++){
+                $("#tweets").prepend(generateTweet(streams[userState][i]));
+            }
+            currentTweetIndex = i + 1;
+        };
+        var generateTweet = function(chirp){
+            var $tweet = $("<tr></tr>");
+            var $part = $("<td></td>");
+            var $part2 = $("<td>Bar</td>");
+            var $part3 = $("<td>FOOB</td>");
+            var $party = $("<a href='#' onclick='goToUser(chirp.user)'></a>");
+            $party.text("@" + chirp.user + ":");
+            $part2.text(chirp.message);
+            $part3.text(chirp.created_at.getHours() + ":" + chirp.created_at.getMinutes() + ":" + chirp.created_at.getSeconds());
+            $part.append($party);
+            $tweet.append($part);
+            $tweet.append($part2);
+            $tweet.append($part3);
+//            var message = $('<td></td>');
+//            message.text('@' + chirp.user + ': ' + chirp.message + " created at: " + chirp.created_at);
+//            $tweet.append($message);
+            return $tweet;
+        };
+        var goToUser = function(userName){
+            alert();
+            if (userState == userName){
+                updateStream();
+            } else {
+                userState = userName;
+                currentTweetIndex = 0;
+                updateStream();
+
+            }
+        };
+
+
+
+
+        $(document).ready(function(){
+            updateStream();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        });
+    </script>
   </body>
 </html>
