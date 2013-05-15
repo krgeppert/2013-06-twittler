@@ -24,11 +24,18 @@
         </tr>
     </table>
     <script>
+        var uniqueId = 0;
         var currentTweetIndex = 0;
         var userState = "home";
         var updateStream = function(){
-            for (var i = currentTweetIndex; i < streams.home.length; i++){
-                $("#tweets").prepend(generateTweet(streams[userState][i]));
+            if (userState == "home"){
+                for (var i = currentTweetIndex; i < streams[userState].length; i++){
+                    $("#tweets").prepend(generateTweet(streams[userState][i]));
+                }
+            } else {
+                for (var i = currentTweetIndex; i < streams.users[userState].length; i++){
+                    $("#tweets").prepend(generateTweet(streams.users[userState][i]));
+                }
             }
             currentTweetIndex = i + 1;
         };
@@ -37,7 +44,9 @@
             var $part = $("<td></td>");
             var $part2 = $("<td>Bar</td>");
             var $part3 = $("<td>FOOB</td>");
-            var $party = $("<a href='#' onclick='goToUser(chirp.user)'></a>");
+            var $party = $("<a href='#' onclick='chipShot()'></a>");
+            $party.attr('id', uniqueId);
+            uniqueId++;
             $party.text("@" + chirp.user + ":");
             $part2.text(chirp.message);
             $part3.text(chirp.created_at.getHours() + ":" + chirp.created_at.getMinutes() + ":" + chirp.created_at.getSeconds());
@@ -50,14 +59,21 @@
 //            $tweet.append($message);
             return $tweet;
         };
+        var chipShot = function(){
+            var element = document.getElementById(event.target.id);
+            goToUser(element.text.substring(1, element.text.length - 1));
+
+
+        };
         var goToUser = function(userName){
-            alert();
             if (userState == userName){
                 updateStream();
             } else {
                 userState = userName;
                 currentTweetIndex = 0;
+                $('#tweets').empty();
                 updateStream();
+
 
             }
         };
