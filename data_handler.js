@@ -9,7 +9,7 @@ $(document).ready(function(){
     // Set up Data.
     var streamType = "home";
     var date = new Date();
-    var updateStamp = date.getTime();
+    var currentTweetIndex = 0;
     var $body = $('body');
     var $listOfTweets = $('<ul></ul>');
     var $updateButton = $('<button id="update" type="button" onclick="updateStream()" >Update</button>');
@@ -22,26 +22,25 @@ $(document).ready(function(){
         $updateButton.appendTo($body);
         $homeButton.appendTo($body);
     };
-    var displayTweets = function(){
+    var updateStream = function(){
+        for (var i = currentTweetIndex; i < streams.home.length; i++){
+            $listOfTweets.prepend(generateTweet(streams.home[i]));
+        }
+        currentTweetIndex = i + 1;
     };
     var generateTweet = function(chirp){
         var $tweet = $('<div></div>');
-        $tweet.text('@' + chirp.user + ': ' + chirp.message + " created at: " + chirp.timeStamp);
+        $tweet.text('@' + chirp.user + ': ' + chirp.message + " created at: " + chirp.created_at);
         return $tweet;
     };
-    var updateStream = function(){
+    var displayTweets = function(){
+        updateStream();
     };
-
     // Implement page.
 
     $body.html('');  // What does this do?
     organizePage();
     displayTweets();
-
-
-
-
-
 
 //    var index = streams.home.length - 1;
 //    while(index >= 0){
